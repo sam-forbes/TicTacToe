@@ -14,14 +14,21 @@ public class Board {
 		System.out.println("Running Board");
 	 //TODO: initialise the cells array using ROWS and COLS constants 
 		
-			cells =  new Cell[GameMain.ROWS][GameMain.COLS]; 
+			cells =  new Cell[GameMain.ROWS]  [GameMain.COLS]; 
 		
 			for (int row = 0; row < GameMain.ROWS; ++row) {
 				for (int col = 0; col < GameMain.COLS; ++col) {
 					cells[row][col] = new Cell(row, col);
-					System.out.println("Cell obj made");
+					
 					}
 				}
+			//Delete After || Printing Array objects
+			for(int i=0; i<cells.length; i++){
+			    System.out.println(cells[i]);
+			    // output: 25461234
+			}
+			
+			
 		}
 	
 	
@@ -68,7 +75,7 @@ public class Board {
 	 */
 	public void paint(Graphics g) {
 		//draw the grid
-		g.setColor(Color.gray);
+		g.setColor(Color.BLUE);
 		for (int row = 1; row < GameMain.ROWS; ++row) {          
 			g.fillRoundRect(0, GameMain.CELL_SIZE * row - GRID_WIDHT_HALF,                
 					GameMain.CANVAS_WIDTH - 1, GRID_WIDTH,                
@@ -88,5 +95,7 @@ public class Board {
 		}
 	}
 	
-
+		public static void cconsole() { 
+			System.out.println("Board.Console Working"); 
+		}
 }
