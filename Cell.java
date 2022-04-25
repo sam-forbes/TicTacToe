@@ -13,13 +13,15 @@ public class Cell {
 	public Cell(int row, int col) {
 		
 		// TODO: Initialise the variables row, col 
-			row = 3; 
-			 col = 9; 
+		this.row = row; 
+		this.col = col; 
+		
+			
 			
 		
 		
 		//TODO: call the method that sets the cell content to EMPTY
-		 clear(); 
+		// clear(); 
 	}
 	
 

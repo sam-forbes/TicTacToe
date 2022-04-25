@@ -11,16 +11,19 @@ public class Board {
 	
 	/** Constructor to create the game board */
 	public Board() {
-		
+		System.out.println("Running Board");
 	 //TODO: initialise the cells array using ROWS and COLS constants 
-	
 		
-		for (int row = 0; row < GameMain.ROWS; ++row) {
-			for (int col = 0; col < GameMain.COLS; ++col) {
-				cells[row][col] = new Cell(row, col);
-			}
+			cells =  new Cell[GameMain.ROWS][GameMain.COLS]; 
+		
+			for (int row = 0; row < GameMain.ROWS; ++row) {
+				for (int col = 0; col < GameMain.COLS; ++col) {
+					cells[row][col] = new Cell(row, col);
+					System.out.println("Cell obj made");
+					}
+				}
 		}
-	}
+	
 	
 
 	 /** Return true if it is a draw (i.e., no more EMPTY cells) */ 

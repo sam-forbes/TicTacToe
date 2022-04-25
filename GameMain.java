@@ -38,7 +38,7 @@ public class GameMain extends JPanel implements MouseListener{
 
 	/** Constructor to setup the UI and game components on the panel */
 	public GameMain() {   
-		
+	System.out.println("Running Game Main");
 		// TODO: This JPanel fires a MouseEvent on MouseClicked so add required event listener to 'this'.          
 	    
 	    
@@ -60,7 +60,7 @@ public class GameMain extends JPanel implements MouseListener{
 			new Board();
 		
 		//TODO: call the method to initialise the game board
-			//paint();
+			repaint();
 	}
 	
 	public static void main(String[] args) {
@@ -72,7 +72,7 @@ public class GameMain extends JPanel implements MouseListener{
 				
 				//TODO: create the new GameMain panel and add it to the frame
 				new GameMain();
-				
+			
 				
 				//TODO: set the default close operation of the frame to exit_on_close
 		            
