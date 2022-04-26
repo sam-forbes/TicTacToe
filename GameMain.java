@@ -28,7 +28,8 @@ public class GameMain extends JPanel implements MouseListener{
 	 	 
 	//TODO: create the enumeration for the variable below (GameState currentState)
 	//HINT all of the states you require are shown in the code within GameMain
-	private GameState currentState; 
+	private GameState currentState = GameState.Playing;
+	
 	
 	// the current player
 	private Player currentPlayer; 
@@ -40,7 +41,7 @@ public class GameMain extends JPanel implements MouseListener{
 	public GameMain() {   
 	System.out.println("Running Game Main");
 		// TODO: This JPanel fires a MouseEvent on MouseClicked so add required event listener to 'this'.          
-	    
+		addMouseListener(this); 
 	    
 		// Setup the status bar (JLabel) to display status message       
 		statusBar = new JLabel("         ");       
@@ -61,6 +62,7 @@ public class GameMain extends JPanel implements MouseListener{
 		
 		//TODO: call the method to initialise the game board
 			initGame();
+			
 			
 	}
 	
@@ -128,7 +130,6 @@ public class GameMain extends JPanel implements MouseListener{
 					board.cells[row][col].content = Player.Empty;           
 				}
 			}
-			 currentState = GameState.Playing;
 			 currentPlayer = Player.Cross;
 		}
 		
@@ -143,7 +144,9 @@ public class GameMain extends JPanel implements MouseListener{
 			if(board.hasWon(thePlayer, row, col)) {
 				
 				// TODO: check which player has won and update the currentstate to the appropriate gamestate for the winner
-
+				System.out.println( thePlayer + " has won");
+				
+				System.out.println(GameState.Cross_won);
 				
 			} else 
 				if (board.isDraw ()) {
@@ -161,6 +164,7 @@ public class GameMain extends JPanel implements MouseListener{
 		 *  If win or Draw then call is made to method that resets the game board.  Finally a call is made to refresh the canvas so that new symbol appears*/
 	
 	public void mouseClicked(MouseEvent e) {  
+		System.out.println("Mouse Clicked");
 	    // get the coordinates of where the click event happened            
 		int mouseX = e.getX();             
 		int mouseY = e.getY();             

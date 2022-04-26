@@ -1,9 +1,6 @@
 
-public class GameState {
-
-	public static GameState Playing ;
-	public static GameState Nought_won;
-	public static GameState Cross_won;
-	public static GameState Draw;
+public enum GameState {
+	 Playing, Draw, Cross_won, Nought_won
+	
 
 }
