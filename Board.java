@@ -14,8 +14,8 @@ public class Board {
 		System.out.println("Running Board");
 	 //TODO: initialise the cells array using ROWS and COLS constants 
 		
-			cells =  new Cell[GameMain.ROWS]  [GameMain.COLS]; 
-		
+			//cells =  new Cell[GameMain.ROWS] [GameMain.COLS]; 
+			cells = new Cell[9] [9]; //need to use constants 
 			for (int row = 0; row < GameMain.ROWS; ++row) {
 				for (int col = 0; col < GameMain.COLS; ++col) {
 					cells[row][col] = new Cell(row, col);
