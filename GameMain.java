@@ -124,6 +124,7 @@ public class GameMain extends JPanel implements MouseListener{
 	
 	  /** Initialise the game-board contents and the current status of GameState and Player) */
 		public void initGame() {
+	
 			for (int row = 0; row < ROWS; ++row) {          
 				for (int col = 0; col < COLS; ++col) {  
 					// all cells empty
@@ -131,6 +132,7 @@ public class GameMain extends JPanel implements MouseListener{
 				}
 			}
 			 currentPlayer = Player.Cross;
+			 currentState = GameState.Playing;
 		}
 		
 		
