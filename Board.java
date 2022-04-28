@@ -21,13 +21,7 @@ public class Board {
 					
 					}
 				}
-			//Delete After || Printing Array objects
-			 System.out.println(cells.length);
-			for(int i=0; i<cells.length; i++){
-			    System.out.println(cells[i]);
-			    // output: 25461234
-			}
-			
+				
 			
 		}
 	

@@ -39,7 +39,7 @@ public class GameMain extends JPanel implements MouseListener{
 
 	/** Constructor to setup the UI and game components on the panel */
 	public GameMain() {   
-	System.out.println("Running Game Main");
+	
 		// TODO: This JPanel fires a MouseEvent on MouseClicked so add required event listener to 'this'.          
 		addMouseListener(this); 
 	    
@@ -144,7 +144,7 @@ public class GameMain extends JPanel implements MouseListener{
 			if(board.hasWon(thePlayer, row, col)) {
 				
 				// TODO: check which player has won and update the currentstate to the appropriate gamestate for the winner
-				System.out.println( thePlayer + " has won");
+			
 				
 				if (thePlayer.toString() == "Cross") {
 					currentState = GameState.Cross_won;
@@ -171,7 +171,7 @@ public class GameMain extends JPanel implements MouseListener{
 		 *  If win or Draw then call is made to method that resets the game board.  Finally a call is made to refresh the canvas so that new symbol appears*/
 	
 	public void mouseClicked(MouseEvent e) {  
-		System.out.println("Mouse Clicked");
+		
 	    // get the coordinates of where the click event happened            
 		int mouseX = e.getX();             
 		int mouseY = e.getY();             
@@ -198,7 +198,8 @@ public class GameMain extends JPanel implements MouseListener{
 		}   
 		
 		//TODO: redraw the graphics on the UI          
-         //  repaint(); 
+          repaint(); 
+		
 	}
 		
 	
